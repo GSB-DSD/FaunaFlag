@@ -1,0 +1,182 @@
+{
+  "project_name": "FaunaFlag: The Animal Cruelty Film Test & Curated Archive",
+  "app_type": "hybrid_fullstack",
+  "archetype": "ARCHETYPE 5: LUXURY & EDITORIAL CINEMA (Plain Cinematic & Film Archive Aesthetic)",
+  "design_intent": "A plain, solemn, high-contrast cinematic editorial aesthetic inspired by 35mm film classification archives (BFI / Criterion / AFI), vintage film cue sheets, and stark editorial typography. The layout rejects generic AI cards and saturated gradients, relying instead on pure obsidian backgrounds, film grain textures, crisp typographic cards without posters, high-legibility red/amber/green classification badges, and tactile archival inspection meters.",
+  "theme": "dark_cinematic",
+  "typography": {
+    "font_heading": "'Playfair Display Variable', serif",
+    "font_body": "'Instrument Sans Variable', sans-serif",
+    "font_mono": "'JetBrains Mono Variable', monospace",
+    "css_import_line": "@import \"@fontsource-variable/playfair-display\";\n@import \"@fontsource-variable/instrument-sans\";\n@import \"@fontsource-variable/jetbrains-mono\";",
+    "scale_px": {
+      "display": 56,
+      "h1": 44,
+      "h2": 32,
+      "h3": 24,
+      "body": 16,
+      "caption": 14
+    },
+    "hierarchy_rules": "Headings use serif Playfair Display in uppercase or editorial title-case with tight tracking (-0.03em). Metadata, flag indicators, and test counters use JetBrains Mono in uppercase with wide tracking (0.15em). Body text uses Instrument Sans with relaxed line height (1.6) for sustained reading of animal treatment descriptions."
+  },
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#0B0C0E",
+        "on_bg": "#EDEDED",
+        "on_bg_muted": "#9BA1A6",
+        "roles": {
+          "border": "#22262B",
+          "link": "#D4AF37",
+          "link_hover": "#F3E5AB"
+        }
+      },
+      {
+        "name": "panel",
+        "kind": "solid",
+        "bg": "#13161A",
+        "on_bg": "#EDEDED",
+        "on_bg_muted": "#8E959E",
+        "roles": {
+          "border": "#282D35",
+          "border_highlight": "#3E4552"
+        }
+      },
+      {
+        "name": "card_cinema",
+        "kind": "solid",
+        "bg": "#161A20",
+        "on_bg": "#F5F6F8",
+        "on_bg_muted": "#9AA2AC",
+        "roles": {
+          "border": "#2B323D",
+          "tag_bg": "#1F242C"
+        }
+      },
+      {
+        "name": "hero",
+        "kind": "solid",
+        "bg": "#08090B",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#A2AAB4",
+        "roles": {
+          "accent_gold": "#D4AF37"
+        }
+      },
+      {
+        "name": "flag_red",
+        "kind": "solid",
+        "bg": "#2A1215",
+        "on_bg": "#FF858B",
+        "on_bg_muted": "#E5484D",
+        "roles": {
+          "border": "#E5484D",
+          "indicator": "#FF6369",
+          "solid_btn": "#E5484D",
+          "on_solid_btn": "#FFFFFF"
+        }
+      },
+      {
+        "name": "flag_amber",
+        "kind": "solid",
+        "bg": "#281D0B",
+        "on_bg": "#FFC53D",
+        "on_bg_muted": "#FFB224",
+        "roles": {
+          "border": "#F5A623",
+          "indicator": "#FFBA18",
+          "solid_btn": "#D97706",
+          "on_solid_btn": "#0B0C0E"
+        }
+      },
+      {
+        "name": "flag_green",
+        "kind": "solid",
+        "bg": "#0D2218",
+        "on_bg": "#46A758",
+        "on_bg_muted": "#30A46C",
+        "roles": {
+          "border": "#30A46C",
+          "indicator": "#3DD68C",
+          "solid_btn": "#30A46C",
+          "on_solid_btn": "#0B0C0E"
+        }
+      },
+      {
+        "name": "admin_panel",
+        "kind": "solid",
+        "bg": "#121418",
+        "on_bg": "#EDEDED",
+        "on_bg_muted": "#8A929C",
+        "roles": {
+          "border": "#242932"
+        }
+      }
+    ],
+    "accent": "#D4AF37",
+    "on_accent": "#0B0C0E",
+    "system_flags": {
+      "red": {
+        "hex": "#E5484D",
+        "label": "Red Flag",
+        "definition": "Explicit harm, documented historical cruelty, severe distress, exploitation, or fatal off-screen injury."
+      },
+      "amber": {
+        "hex": "#F5A623",
+        "label": "Amber Flag",
+        "definition": "Simulated peril, distressing CGI/practical effects, minor discomfort, ethical grey zones, or high-tension narrative themes."
+      },
+      "green": {
+        "hex": "#30A46C",
+        "label": "Green Flag",
+        "definition": "Ethically supervised, humane animal welfare certified, CGI/animatronic replacements, zero distress, or protective narrative focus."
+      }
+    }
+  },
+  "entry_surfaces": {
+    "/": "cinematic split hero — editorial thesis & 3-flag criteria left with Start Test CTA, real-time community index & featured archival cue-card right",
+    "/quiz": "focused single-film appraisal desk — archival slate number, prominent typographic film card with treatment dossier, and tactile Red/Amber/Green grading controls with skip & progress counter",
+    "/results": "editorial classification report — percentile breakdown gauge, personal tolerance index vs official curated alignment, community comparative analysis, and film-by-film debrief ledger",
+    "/library": "searchable archival index — film catalogue with filter by Flag (Red/Amber/Green), genre, year, search input, and expandable cue-cards showing official treatment dossiers",
+    "/admin": "restricted archive terminal — PIN-gated authentication panel, seed database controls, and full CRUD table for managing films, release years, species involved, animal treatment notes, and curated flags"
+  },
+  "grids_and_layouts": {
+    "container_max_width": "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8",
+    "spacing_scale": "Tailwind standard p-4, p-6, p-8, p-12, py-16, py-24",
+    "film_card_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+    "quiz_layout": "max-w-3xl mx-auto py-12 px-4 sm:px-6",
+    "results_split": "grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+  },
+  "motion": {
+    "card_transition": "transition-transform duration-300 ease-out hover:-translate-y-1",
+    "choice_click_animation": "scale-[0.98] active:scale-[0.95] transition-all duration-150",
+    "progress_bar": "transition-all duration-500 ease-in-out",
+    "respect_reduced_motion": "Wrap interactive animations in motion-safe queries and respect prefers-reduced-motion"
+  },
+  "accessibility": {
+    "contrast_ratio": "All body text meets WCAG AA (>= 4.5:1) against respective background panels; badges use high-contrast dark-tinted backgrounds with bright foreground glyphs.",
+    "keyboard_navigation": "Quiz options support keyboard shortcuts (1 or R for Red, 2 or A for Amber, 3 or G for Green, Space for Skip/Next).",
+    "test_attributes": "All interactive elements and key stats MUST have descriptive data-testid attributes (e.g. data-testid='flag-btn-red', data-testid='quiz-progress-counter', data-testid='library-search-input')."
+  },
+  "component_structure": {
+    "header_nav": "frontend/src/components/layout/Navbar.tsx (Logo 'FAUNAFLAG' with film reel icon + Test, Library, Community Index, Admin links + Start Test button)",
+    "footer": "frontend/src/components/layout/Footer.tsx (Archival mission statement, methodology notice, Bechdel-inspired disclaimer, data provenance)",
+    "quiz_card": "frontend/src/components/quiz/FilmQuizCard.tsx (Typographic film card: Title, Year, Director/Genre, Species list, 'Animal Depiction Dossier', 3 Large Flag Buttons with hotkeys)",
+    "results_breakdown": "frontend/src/components/results/ResultsAnalytics.tsx (Pie/Donut & Bar charts of Red/Amber/Green %, Agreement Score with Curated Expert rating, Community percentile ranking, and breakdown table)",
+    "library_filters": "frontend/src/components/library/FilmLibrary.tsx (Search bar, Flag pills Red/Amber/Green/All, Species selector, Sort by Year/Title/Flag)",
+    "admin_manager": "frontend/src/components/admin/AdminFilmManager.tsx (PIN authentication modal, add film modal with title, year, species, treatment note, curated flag, and table with edit/delete)"
+  },
+  "instructions_to_main_agent": [
+    "1. THEME: Plain cinematic dark design. Set <html> to class='dark' in index.html. Use crisp borders (border-border/40), deep charcoal/obsidian surfaces, subtle gold accents, and high-visibility Red/Amber/Green indicators.",
+    "2. NO FILM POSTERS AVAILABLE: Design typographic cue-cards (like 35mm film archive cards or clapperboards) with prominent Title, Year badge, Species tag, and an expansive 'Animal Treatment Dossier' text block.",
+    "3. SEEDED DATABASE: Seed at least 40 diverse, widely known films spanning 1930s-2020s with detailed animal depiction notes and official Red/Amber/Green flags (e.g., Milo and Otis [Red], Apocalypse Now [Red], The Wizard of Oz [Amber], Life of Pi [Green/CGI], Babe [Amber/Green], John Wick [Amber], Dances with Wolves [Amber], Wendy and Lucy [Green], War Horse [Green], Old Yeller [Amber], The Birds [Amber], Cannibal Holocaust [Red], Free Willy [Amber], Homeward Bound [Green], Hachiko [Green], Roar [Red], Ben-Hur [Red], Planet of the Apes [Green], A Dog's Purpose [Amber], The Revenant [Green/CGI], etc.).",
+    "4. QUIZ MECHANICS: User can choose to take a quick quiz (10 random films) or the full archive test (25-40 films). User votes Red, Amber, or Green per film. Show real-time progress bar (e.g. 'Film 4 of 10') and back/skip options.",
+    "5. RESULTS ENGINE: Calculate exact % Red, % Amber, % Green. Calculate 'Tolerance Index' (Strict Animal Guardian vs Lenient Cinephile), '% Agreement with Curated Standard' (e.g. 82% concordance), and compare against aggregated community averages stored in MongoDB.",
+    "6. PERSISTENCE & COMMUNITY STATS: Store completed quiz submissions anonymously to compute live community stats (e.g., total tests taken, most agreed-upon Red flags, average green tolerance).",
+    "7. CURATED FILM ARCHIVE (/library): A comprehensive browser showing all ~40+ films with search by title, filter by flag badge (Red/Amber/Green), sort by release year or severity, and expandable drawer/card showing detailed rationale.",
+    "8. ADMIN GATE (/admin): Prompt for PIN (default '2026' or 'filmadmin'). Once verified, allow adding new films, editing existing films, deleting films, and resetting/reseeding sample data.",
+    "9. TESTING ATTRIBUTES: Include data-testid on all buttons, inputs, flag controls, quiz cards, results numbers, and admin actions."
+  ]
+}
